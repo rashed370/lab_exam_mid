@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Online Clothing -Login</title>
+    </head>
+    <body>
+        <h3>Wellcome to Online Clothing</h3>
+        <a href="/search">Search Cloths</a><br>
+
+        <h3>Cloths Categories</h3>
+        <% if(categories && categories.length>0) { %>
+        <% categories.forEach(category => { %>
+            <a href="/category/<%=category.name%>"><%=category.name%></a><br>
+        <% }) %>
+        <% } %>
+
+        <h3>Cloths By Gender</h3>
+        <% if(genders && genders.length>0) { %>
+        <% genders.forEach(gender => { %>
+            <a href="/gender/<%=gender.name%>"><%=gender.name%></a><br>
+        <% }) %>
+        <% } %>
+    </body>
+</html>
